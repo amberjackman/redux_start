@@ -31,3 +31,41 @@ export function showAll() {
 export function showComplete() {
   return { type: SHOW_COMPLETE };
 };
+
+
+// users action type
+
+export const GET_USERS_START = 'GET_USERS_START'; 
+// github api calling start 
+
+
+export const GET_USERS_SUCCESS = 'GET_USERS_SUCCESS'; 
+// 응답이 성공적으로 돌아온 경우
+
+export const GET_USERS_FAIL = 'GET_USERS_FAIL'; 
+// 응답이 성공적으로 돌아온 경우
+
+export function getUsersStart() {
+
+  return {
+    type: GET_USERS_START
+  }
+}
+
+
+export function getUsersSuccess(data) {
+
+  return {
+    type: GET_USERS_SUCCESS,
+    data,
+  }
+}
+
+
+export function getUsersFail(error) {
+
+  return {
+    type: GET_USERS_FAIL,
+    error,
+  }
+}
